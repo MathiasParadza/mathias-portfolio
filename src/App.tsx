@@ -67,7 +67,7 @@ function App() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="section-card"
         >
-          <h2 className="section-title gradient-blue">Profile Summary</h2>
+          <h2 className="section-title gradient-cyan">Profile Summary</h2>
           <p className="section-text">
             I am a dedicated and innovative Computer Science graduate specializing in Networking and
             Information Security. With strong skills in Full Stack Development, Network Configuration
@@ -106,7 +106,7 @@ function App() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="section-card"
         >
-          <h2 className="section-title gradient-teal">Core Skills</h2>
+          <h2 className="section-title gradient-cyan">Core Skills</h2>
           <div className="skills-grid">
             {skills.map((skill, i) => (
               <motion.div
@@ -129,7 +129,7 @@ function App() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="section-card"
         >
-          <h2 className="section-title gradient-purple">Professional Experience</h2>
+          <h2 className="section-title gradient-blue">Professional Experience</h2>
           <div className="experience-content">
             <p className="experience-title">Junior Developer – Godspeed Technologies Limited</p>
             <p className="experience-date">Jan 2025 – Mar 2025 | Lusaka, Zambia</p>
@@ -150,7 +150,7 @@ function App() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="section-card"
         >
-          <h2 className="section-title gradient-pink">Major Project: QRPresence</h2>
+          <h2 className="section-title gradient-blue">Major Project: QRPresence</h2>
           <div className="project-content">
             <h3 className="project-name">QRPresence</h3>
             <p className="project-description">
@@ -181,7 +181,7 @@ function App() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="section-card"
         >
-          <h2 className="section-title gradient-blue-cyan">Contact Information</h2>
+          <h2 className="section-title gradient-blue">Contact Information</h2>
           <div className="contacts-grid">
             {contacts.map((contact, i) => (
               <motion.div
