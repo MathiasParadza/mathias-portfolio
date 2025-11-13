@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mathias-portfolio/static/css/main.b5c20042.css",
+    "main.js": "/mathias-portfolio/static/js/main.e2416046.js",
+    "static/js/453.b7f62848.chunk.js": "/mathias-portfolio/static/js/453.b7f62848.chunk.js",
+    "index.html": "/mathias-portfolio/index.html",
+    "main.b5c20042.css.map": "/mathias-portfolio/static/css/main.b5c20042.css.map",
+    "main.e2416046.js.map": "/mathias-portfolio/static/js/main.e2416046.js.map",
+    "453.b7f62848.chunk.js.map": "/mathias-portfolio/static/js/453.b7f62848.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5c20042.css",
+    "static/js/main.e2416046.js"
+  ]
+}
