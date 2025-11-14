@@ -57,7 +57,8 @@ function App() {
             <div className="header-underline"></div>
           </div>
           <p className="header-subtitle">
-            Networking & Information Security Engineer | Full Stack Developer | Graphic Designer | Entrepreneur | AI Enthusiast
+            Networking & Information Security Engineer | Full Stack Developer | Graphic Designer 
+            | Entrepreneur | AI Enthusiast | Visionary
           </p>
         </motion.header>
 
@@ -69,11 +70,14 @@ function App() {
         >
           <h2 className="section-title gradient-cyan">Profile Summary</h2>
           <p className="section-text">
-            I am a dedicated and innovative Computer Science graduate specializing in Networking and
-            Information Security. With strong skills in Full Stack Development, Network Configuration
-            and Troubleshooting, and Database Management, I am passionate about building secure,
-            scalable, and intelligent digital systems. I bring a creative and analytical approach to
-            solving technical challenges, excelling in both independent and team-driven environments.
+            I am a results-driven Computer Science engineer specializing in Networking and
+            Information Security, with strong expertise in Full Stack Development, Network Configuration
+            and Troubleshooting, and Database Management. I am passionate about designing secure,
+            scalable, and intelligent digital systems that deliver meaningful impact. With a blend of
+            creativity and technical precision, I approach complex challenges with analytical
+            problem-solving and a commitment to high-quality execution. I excel in both collaborative
+            team environments and independent project roles.
+
           </p>
         </motion.section>
 
@@ -215,11 +219,9 @@ function App() {
       </div>
     ))}
   </div>
-   <div className="project-spacing"></div>
 
   {/* ---------------- Beowulf Cluster Project ---------------- */}
   <div className="project-content project-content-margin">
-        <h3 className="project-name">Beowulf Cluster (Virtual & Physical)</h3>
     <h3 className="project-name">Beowulf Cluster (Virtual & Physical)</h3>
     <p className="project-description">
       A project focused on setting up and managing a hybrid Beowulf cluster
