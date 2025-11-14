@@ -57,7 +57,7 @@ function App() {
             <div className="header-underline"></div>
           </div>
           <p className="header-subtitle">
-            Computer Science Graduate | Networking & Information Security Specialist
+            Networking & Information Security Engineer | Full Stack Developer | Graphic Designer | Entrepreneur | AI Enthusiast
           </p>
         </motion.header>
 
@@ -132,7 +132,7 @@ function App() {
           <h2 className="section-title gradient-blue">Professional Experience</h2>
           <div className="experience-content">
             <p className="experience-title">Junior Developer – Godspeed Technologies Limited</p>
-            <p className="experience-date">Jan 2025 – Mar 2025 | Lusaka, Zambia</p>
+            <p className="experience-date">Jan 2025 – April 2025 | Lusaka, Zambia</p>
             <div className="experience-list">
               {experienceItems.map((item, i) => (
                 <div key={i} className="experience-item">
@@ -174,6 +174,83 @@ function App() {
             ))}
           </div>
         </motion.section>
+{/* ---------------- COURSE PROJECTS ---------------- */}
+
+<motion.section 
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.75 }}
+  className="section-card"
+>
+  <h2 className="section-title gradient-blue">Course Projects</h2>
+
+  {/* ---------------- Hospital Management System ---------------- */}
+  <div className="project-content">
+    <h3 className="project-name">Hospital Management System</h3>
+    <p className="project-description">
+      A full web-based system built to streamline hospital operations such as
+      patient registration, appointment scheduling, staff management, and
+      medical record tracking.
+    </p>
+
+    <div className="project-tech-stack">
+      <p className="tech-stack-label">Role: Full Stack Developer</p>
+      <p className="tech-stack-label">Tech Stack:</p>
+      <p className="tech-stack-text">
+        PHP, JavaScript, HTML, CSS, MySQL
+      </p>
+    </div>
+  </div>
+
+  <div className="project-features">
+    {[
+      "Designed and implemented frontend and backend features for core hospital workflows.",
+      "Built user-friendly interfaces for doctors, nurses, and admin staff.",
+      "Developed secure PHP backend logic for patient data, appointments, and billing.",
+      "Integrated MySQL database for patient demographics, medical history, and hospital data."
+    ].map((feature, i) => (
+      <div key={i} className="project-feature-item">
+        <span className="project-feature-bullet">●</span>
+        <span className="project-feature-text">{feature}</span>
+      </div>
+    ))}
+  </div>
+   <div className="project-spacing"></div>
+
+  {/* ---------------- Beowulf Cluster Project ---------------- */}
+  <div className="project-content project-content-margin">
+        <h3 className="project-name">Beowulf Cluster (Virtual & Physical)</h3>
+    <h3 className="project-name">Beowulf Cluster (Virtual & Physical)</h3>
+    <p className="project-description">
+      A project focused on setting up and managing a hybrid Beowulf cluster
+      using physical and virtual machines to support distributed and parallel
+      computing workloads.
+    </p>
+
+    <div className="project-tech-stack">
+      <p className="tech-stack-label">Role: Systems Administrator / Cluster Engineer</p>
+      <p className="tech-stack-label">Tech Areas:</p>
+      <p className="tech-stack-text">
+        Linux Administration, Networking, MPI/OpenMP, Parallel Computing
+      </p>
+    </div>
+  </div>
+
+  <div className="project-features">
+    {[
+      "Installed and configured Linux OS across multiple cluster nodes.",
+      "Set up networking including IP assignment, SSH access, and NFS shared directories.",
+      "Configured cluster management tools for seamless node communication.",
+      "Deployed and tested parallel programming environments (MPI/OpenMP).",
+      "Monitored cluster performance and optimized inter-node communication."
+    ].map((feature, i) => (
+      <div key={i} className="project-feature-item">
+        <span className="project-feature-bullet">●</span>
+        <span className="project-feature-text">{feature}</span>
+      </div>
+    ))}
+  </div>
+</motion.section>
 
         <motion.section 
           initial={{ opacity: 0, y: 30 }}
