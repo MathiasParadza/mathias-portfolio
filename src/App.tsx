@@ -36,10 +36,10 @@ function App() {
 
  const contacts = [ 
   { icon: "📧", label: "Email", value: "Mathiasparadza01@email.com", link: "mailto:Mathiasparadza01@email.com" },
-  { icon: "📞", label: "Phone", value: "+260 971 546 581", link: "tel:+260971546581 / +260768619298" },
+  { icon: "📞", label: "Phone", value: "+260 971 546 581", link: "tel:+260971546581" },
   { icon: "💻", label: "GitHub", value: "github.com/mathiasparadza", link: "https://github.com/mathiasparadza" },
   { icon: "🔗", label: "LinkedIn", value: "linkedin.com/in/mathiasparadza", link: "https://linkedin.com/in/mathiasparadza" },
-  { icon: "🏅", label: "Credly", value: "mathias-paradza", link: "https://www.credly.com/users/mathias-paradza" },
+  { icon: "🏅", label: "Credly (View Certifications)", value: "mathias-paradza", link: "https://www.credly.com/users/mathias-paradza" },
   { icon: "📍", label: "Location", value: "Lusaka, Zambia", link: null }
 ];
 
