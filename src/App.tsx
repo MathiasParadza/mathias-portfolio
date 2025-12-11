@@ -70,13 +70,9 @@ function App() {
         >
           <h2 className="section-title gradient-cyan">Profile Summary</h2>
           <p className="section-text">
-            I am a results-driven Computer Science engineer specializing in Networking and
-            Information Security, with strong expertise in Full Stack Development, Network Configuration
-            and Troubleshooting, and Database Management. I am passionate about designing secure,
-            scalable, and intelligent digital systems that deliver meaningful impact. With a blend of
-            creativity and technical precision, I approach complex challenges with analytical
-            problem-solving and a commitment to high-quality execution. I excel in both collaborative
-            team environments and independent project roles.
+            A results-driven IT professional with strong expertise in networking, information security,
+           and full-stack development. Proficient in analytical problem-solving and adaptability to both 
+           team-based and independent technical roles.
 
           </p>
         </motion.section>
