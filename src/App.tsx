@@ -34,34 +34,48 @@ function App() {
     "AI-powered attendance insights"
   ];
 
- const contacts = [ 
-  { icon: "📧", label: "Email", value: "Mathiasparadza01@email.com", link: "mailto:Mathiasparadza01@email.com" },
-  { icon: "📞", label: "Phone", value: "+260 971 546 581", link: "tel:+260971546581" },
-  { icon: "💻", label: "GitHub", value: "github.com/mathiasparadza", link: "https://github.com/mathiasparadza" },
-  { icon: "🔗", label: "LinkedIn", value: "linkedin.com/in/mathiasparadza", link: "https://linkedin.com/in/mathiasparadza" },
-  { icon: "🏅", label: "Credly (View Certifications)", value: "mathias-paradza", link: "https://www.credly.com/users/mathias-paradza" },
-  { icon: "📍", label: "Location", value: "Lusaka, Zambia", link: null }
-];
+  const contacts = [
+    { icon: "📧", label: "Email", value: "Mathiasparadza01@email.com", link: "mailto:Mathiasparadza01@email.com" },
+    { icon: "📞", label: "Phone", value: "+260 971 546 581", link: "tel:+260971546581" },
+    { icon: "💻", label: "GitHub", value: "github.com/mathiasparadza", link: "https://github.com/mathiasparadza" },
+    { icon: "🔗", label: "LinkedIn", value: "linkedin.com/in/mathiasparadza", link: "https://linkedin.com/in/mathiasparadza" },
+    { icon: "🏅", label: "Credly (View Certifications)", value: "mathias-paradza", link: "https://www.credly.com/users/mathias-paradza" },
+    { icon: "📍", label: "Location", value: "Lusaka, Zambia", link: null }
+  ];
 
   return (
     <div className="portfolio-container">
       <div className="portfolio-content">
-        <motion.header 
+
+        {/* ---------- HEADER WITH PROFILE PHOTO ---------- */}
+        <motion.header
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="portfolio-header"
         >
+
+          {/* PROFILE PHOTO */}
+          <div className="profile-photo-wrapper">
+            <img
+              src="/images/profile.jpg"
+              alt="Profile"
+              className="profile-photo"
+            />
+          </div>
+
           <div className="header-name-wrapper">
             <h1 className="header-name">Mathias Paradza</h1>
             <div className="header-underline"></div>
           </div>
+
           <p className="header-subtitle">
-            Networking & Information Security Engineer | Full Stack Developer | Graphic Designer 
+            Networking & Information Security Engineer | Full Stack Developer | Graphic Designer
             | Entrepreneur | AI Enthusiast | Visionary
           </p>
         </motion.header>
 
+        {/* ---------- PROFILE SUMMARY ---------- */}
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,13 +85,13 @@ function App() {
           <h2 className="section-title gradient-cyan">Profile Summary</h2>
           <p className="section-text">
             A results-driven IT professional with strong expertise in networking, information security,
-           and full-stack development. Proficient in analytical problem-solving and adaptability to both 
-           team-based and independent technical roles.
-
+            and full-stack development. Proficient in analytical problem-solving and adaptability to both
+            team-based and independent technical roles.
           </p>
         </motion.section>
 
-        <motion.section 
+        {/* ---------- CERTIFICATIONS ---------- */}
+        <motion.section
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -86,7 +100,7 @@ function App() {
           <h2 className="section-title gradient-cyan">Certifications</h2>
           <div className="certifications-list">
             {certifications.map((cert, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -100,7 +114,8 @@ function App() {
           </div>
         </motion.section>
 
-        <motion.section 
+        {/* ---------- SKILLS ---------- */}
+        <motion.section
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -123,7 +138,8 @@ function App() {
           </div>
         </motion.section>
 
-        <motion.section 
+        {/* ---------- EXPERIENCE ---------- */}
+        <motion.section
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
@@ -144,27 +160,41 @@ function App() {
           </div>
         </motion.section>
 
-        <motion.section 
+        {/* ---------- MAIN PROJECT: QRPresence ---------- */}
+        <motion.section
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="section-card"
         >
           <h2 className="section-title gradient-blue">Major Project: QRPresence</h2>
+
           <div className="project-content">
             <h3 className="project-name">QRPresence</h3>
             <p className="project-description">
               A QR Code-Based Student Registration and Attendance Tracking System designed to
               enhance attendance management in academic institutions.
             </p>
+
             <div className="project-tech-stack">
               <p className="tech-stack-label">Role: Full-Stack Developer</p>
               <p className="tech-stack-label">Tech Stack:</p>
               <p className="tech-stack-text">
-               Python(Django), React (TypeScript),OpenApi(AI analytics) Zustand/Recoil, MySQL, JWT Authentication
+                Python(Django), React (TypeScript), OpenApi(AI analytics),
+                Zustand/Recoil, MySQL, JWT Authentication
               </p>
             </div>
           </div>
+
+          {/* ---------- PROJECT PHOTO ---------- */}
+          <div className="project-image-wrapper">
+            <img
+              src="/images/qrpresence.jpg"
+              alt="QRPresence Project"
+              className="project-image"
+            />
+          </div>
+
           <div className="project-features">
             {projectFeatures.map((feature, i) => (
               <div key={i} className="project-feature-item">
@@ -174,83 +204,80 @@ function App() {
             ))}
           </div>
         </motion.section>
-{/* ---------------- COURSE PROJECTS ---------------- */}
 
-<motion.section 
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: 0.75 }}
-  className="section-card"
->
-  <h2 className="section-title gradient-blue">Course Projects</h2>
+        {/* ---------- COURSE PROJECTS ---------- */}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.75 }}
+          className="section-card"
+        >
+          <h2 className="section-title gradient-blue">Course Projects</h2>
 
-  {/* ---------------- Hospital Management System ---------------- */}
-  <div className="project-content">
-    <h3 className="project-name">Hospital Management System</h3>
-    <p className="project-description">
-      A full web-based system built to streamline hospital operations such as
-      patient registration, appointment scheduling, staff management, and
-      medical record tracking.
-    </p>
+          {/* Hospital Management System */}
+          <div className="project-content">
+            <h3 className="project-name">Hospital Management System</h3>
+            <p className="project-description">
+              A web system designed to streamline hospital operations including patient registration,
+              appointments, staff management, and medical records.
+            </p>
 
-    <div className="project-tech-stack">
-      <p className="tech-stack-label">Role: Full Stack Developer</p>
-      <p className="tech-stack-label">Tech Stack:</p>
-      <p className="tech-stack-text">
-        PHP, JavaScript, HTML, CSS, MySQL
-      </p>
-    </div>
-  </div>
+            <div className="project-tech-stack">
+              <p className="tech-stack-label">Role: Full Stack Developer</p>
+              <p className="tech-stack-label">Tech Stack:</p>
+              <p className="tech-stack-text">PHP, JavaScript, HTML, CSS, MySQL</p>
+            </div>
+          </div>
 
-  <div className="project-features">
-    {[
-      "Designed and implemented frontend and backend features for core hospital workflows.",
-      "Built user-friendly interfaces for doctors, nurses, and admin staff.",
-      "Developed secure PHP backend logic for patient data, appointments, and billing.",
-      "Integrated MySQL database for patient demographics, medical history, and hospital data."
-    ].map((feature, i) => (
-      <div key={i} className="project-feature-item">
-        <span className="project-feature-bullet">●</span>
-        <span className="project-feature-text">{feature}</span>
-      </div>
-    ))}
-  </div>
+          <div className="project-features">
+            {[
+              "Designed and implemented core hospital workflows.",
+              "Built user interfaces for doctors, nurses, and admin staff.",
+              "Developed secure PHP backend for patient and appointment data.",
+              "Integrated MySQL database for medical history and billing."
+            ].map((feature, i) => (
+              <div key={i} className="project-feature-item">
+                <span className="project-feature-bullet">●</span>
+                <span className="project-feature-text">{feature}</span>
+              </div>
+            ))}
+          </div>
 
-  {/* ---------------- Beowulf Cluster Project ---------------- */}
-  <div className="project-content project-content-margin">
-    <h3 className="project-name">Beowulf Cluster (Virtual & Physical)</h3>
-    <p className="project-description">
-      A project focused on setting up and managing a hybrid Beowulf cluster
-      using physical and virtual machines to support distributed and parallel
-      computing workloads.
-    </p>
+          {/* Beowulf Cluster */}
+          <div className="project-content project-content-margin">
+            <h3 className="project-name">Beowulf Cluster (Virtual & Physical)</h3>
+            <p className="project-description">
+              Setup and management of a hybrid Beowulf cluster using virtual and physical machines
+              for distributed and parallel computing.
+            </p>
 
-    <div className="project-tech-stack">
-      <p className="tech-stack-label">Role: Systems Administrator / Cluster Engineer</p>
-      <p className="tech-stack-label">Tech Areas:</p>
-      <p className="tech-stack-text">
-        Linux Administration, Networking, MPI/OpenMP, Parallel Computing
-      </p>
-    </div>
-  </div>
+            <div className="project-tech-stack">
+              <p className="tech-stack-label">Role: Systems Administrator / Cluster Engineer</p>
+              <p className="tech-stack-label">Tech Areas:</p>
+              <p className="tech-stack-text">
+                Linux Administration, Networking, MPI/OpenMP, Parallel Computing
+              </p>
+            </div>
+          </div>
 
-  <div className="project-features">
-    {[
-      "Installed and configured Linux OS across multiple cluster nodes.",
-      "Set up networking including IP assignment, SSH access, and NFS shared directories.",
-      "Configured cluster management tools for seamless node communication.",
-      "Deployed and tested parallel programming environments (MPI/OpenMP).",
-      "Monitored cluster performance and optimized inter-node communication."
-    ].map((feature, i) => (
-      <div key={i} className="project-feature-item">
-        <span className="project-feature-bullet">●</span>
-        <span className="project-feature-text">{feature}</span>
-      </div>
-    ))}
-  </div>
-</motion.section>
+          <div className="project-features">
+            {[
+              "Configured Linux nodes across the cluster.",
+              "Set up SSH, networking, NFS, and shared directories.",
+              "Configured cluster management tools.",
+              "Deployed MPI/OpenMP workloads.",
+              "Optimized inter-node performance."
+            ].map((feature, i) => (
+              <div key={i} className="project-feature-item">
+                <span className="project-feature-bullet">●</span>
+                <span className="project-feature-text">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </motion.section>
 
-        <motion.section 
+        {/* ---------- CONTACT ---------- */}
+        <motion.section
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
@@ -283,6 +310,7 @@ function App() {
             ))}
           </div>
         </motion.section>
+
       </div>
     </div>
   );
