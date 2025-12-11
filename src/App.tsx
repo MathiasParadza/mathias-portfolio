@@ -189,7 +189,7 @@ function App() {
           {/* ---------- PROJECT PHOTO ---------- */}
           <div className="project-image-wrapper">
             <img
-              src="/images/qrpresence.jpg"
+              src="/images/qrpresence.PNG"
               alt="QRPresence Project"
               className="project-image"
             />
