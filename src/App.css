@@ -454,3 +454,95 @@
     padding: 1.5rem;
   }
 }
+/* ---- Multi-entry sections (experience, education, projects) ---- */
+.experience-content + .experience-content {
+  margin-top: 2rem;
+}
+
+.project-block + .project-block {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.project-meta {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(34, 211, 238, 0.5);
+  color: #22d3ee;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+  background: rgba(34, 211, 238, 0.15);
+  color: white;
+}
+
+/* ---- Core competencies ---- */
+.skill-item-stacked {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.skill-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.skill-area {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+/* ---- Technical skills tags ---- */
+.tech-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.tech-skill-area {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: #cbd5e1;
+  font-size: 0.875rem;
+}
+
+.tag-soft {
+  background: rgba(167, 139, 250, 0.1);
+  border-color: rgba(167, 139, 250, 0.3);
+}
+
+.subsection-title {
+  color: #e2e8f0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 2rem 0 0.75rem;
+}

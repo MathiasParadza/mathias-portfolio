@@ -2,60 +2,197 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./App.css";
 
+type Experience = {
+  role: string;
+  company: string;
+  dates: string;
+  location: string;
+  items: string[];
+};
+
+type Project = {
+  name: string;
+  meta: string;
+  description: string;
+  role: string;
+  stack: string;
+  features: string[];
+  link?: { label: string; href: string };
+  image?: { src: string; alt: string };
+};
+
+const experience: Experience[] = [
+  {
+    role: "Home Broadband Installer",
+    company: "Airtel Zambia Plc",
+    dates: "Dec 2025 – Present",
+    location: "Lusaka, Zambia",
+    items: [
+      "Install, configure and test network equipment against defined technical requirements, ensuring service quality and functionality.",
+      "Act as first point of contact for end users, diagnosing and resolving connectivity and technical faults to maintain service standards.",
+      "Engage directly with customers: scheduling installations, reviewing paperwork, educating users on product features and ensuring satisfaction.",
+      "Submit daily technical reports."
+    ]
+  },
+  {
+    role: "Junior Engineer Intern",
+    company: "Daylight Technologies Zambia Ltd",
+    dates: "Jan 2025 – Apr 2025",
+    location: "Lusaka, Zambia",
+    items: [
+      "Served as the first-response support link between business users, clients and Tier 1 technical teams.",
+      "Resolved user queries on system lags, failures, usability issues and access difficulties, and provided general system guidance.",
+      "Onboarded clients across multiple systems, explaining technical steps in simple, practical language.",
+      "Supported account creation, monitored systems for errors and relayed user feedback to technical teams for follow-up.",
+      "Supported web development and system-management activities, including testing, issue resolution, maintenance and technical documentation."
+    ]
+  }
+];
+
+const projects: Project[] = [
+  {
+    name: "The Apostles' Church Website",
+    meta: "Live Project · 2024 – Present",
+    description:
+      "Official 26-page, mobile-first church website, designed and built solo.",
+    role: "Sole Developer",
+    stack: "HTML5 · CSS3 · JavaScript · Bootstrap 5 · Node.js · GitHub Actions · GitHub Pages",
+    features: [
+      "Built all pages end to end, including a history timeline, teaching resources and a church finder with Google Maps.",
+      "Added site-wide search, indexed by a Node.js script, with Ctrl/Cmd+K and “/” keyboard shortcuts.",
+      "Automated checks and deployment to GitHub Pages with GitHub Actions on every merge to main."
+    ],
+    link: {
+      label: "View live site",
+      href: "https://mathiasparadza.github.io/The-Apostles-Church"
+    }
+  },
+  {
+    name: "QRPresence",
+    meta: "Major Project",
+    description:
+      "QR code-based student registration and attendance tracking system for academic institutions.",
+    role: "Full-Stack Developer",
+    stack: "Python (Django) · React (TypeScript) · Zustand/Recoil · MySQL · JWT · OpenAI API",
+    features: [
+      "Built a JWT login system with role-based access for students, lecturers and admins.",
+      "Implemented webcam QR code scanning to record attendance.",
+      "Developed a lecturer dashboard for session creation and attendance analytics, with AI-powered insights."
+    ],
+    image: {
+      src: `${process.env.PUBLIC_URL}/images/qrpresence.PNG`,
+      alt: "QRPresence attendance system screenshot"
+    }
+  },
+  {
+    name: "Hospital Management System",
+    meta: "Course Project",
+    description:
+      "Web system streamlining patient registration, appointments, staff management and medical records.",
+    role: "Full-Stack Developer",
+    stack: "PHP · JavaScript · HTML · CSS · MySQL",
+    features: [
+      "Designed and implemented core hospital workflows.",
+      "Built user interfaces for doctors, nurses and admin staff.",
+      "Developed a secure PHP backend for patient and appointment data, with MySQL storage for medical history and billing."
+    ]
+  },
+  {
+    name: "Beowulf Cluster (Virtual & Physical)",
+    meta: "Course Project",
+    description:
+      "Hybrid Beowulf cluster of virtual and physical machines for distributed and parallel computing.",
+    role: "Systems Administrator / Cluster Engineer",
+    stack: "Linux Administration · Networking · MPI/OpenMP · Parallel Computing",
+    features: [
+      "Configured Linux nodes, SSH, networking, NFS and shared directories across the cluster.",
+      "Set up cluster management tools and deployed MPI/OpenMP workloads.",
+      "Optimised inter-node performance."
+    ]
+  }
+];
+
+const competencies = [
+  { area: "IT & User Support", detail: "Tier 1–2 help desk, first-point-of-contact support, onboarding, access management" },
+  { area: "Networking & Infrastructure", detail: "Network equipment setup and testing, LAN/WAN troubleshooting, Linux administration" },
+  { area: "Software & Web Development", detail: "Full-stack web apps, responsive websites, testing, CI/CD deployment" },
+  { area: "Cybersecurity", detail: "Security best practices, threat detection, access control, data confidentiality" },
+  { area: "Incident & Records Management", detail: "Tracking faults to resolution, escalation, IT asset and user records" },
+  { area: "Communication & Documentation", detail: "User training, customer engagement, technical reports, stakeholder updates" }
+];
+
+const technicalSkills = [
+  { area: "Networking", items: ["LAN/WAN", "Routing & switching", "Device setup & configuration"] },
+  { area: "Programming", items: ["Python", "JavaScript", "React", "Node.js", "PHP", "HTML", "CSS", "Bootstrap", "APIs"] },
+  { area: "Databases", items: ["SQL & NoSQL design", "SQL optimisation"] },
+  { area: "Operating Systems", items: ["Windows", "macOS", "Linux (Ubuntu)"] },
+  { area: "Systems Repair", items: ["Hardware", "Software"] },
+  { area: "Cybersecurity", items: ["Threat detection", "Network vulnerabilities", "Privacy & data confidentiality"] },
+  { area: "Tools & Platforms", items: ["Git & GitHub", "GitHub Actions", "GitHub Pages", "VS Code", "Nmap", "Microsoft 365", "Google Workspace"] }
+];
+
+const professionalSkills = [
+  "Leadership and teamwork",
+  "Adaptable and innovative thinker",
+  "Strong oral and written communication",
+  "Interpersonal and presentation skills"
+];
+
+const education = [
+  {
+    qualification: "Bachelor's Degree in Computer Science, Networking & Information Security",
+    institution: "University of Zambia",
+    detail: "Completed Nov 2025 (Credit)"
+  },
+  {
+    qualification: "Grade 12 Certificate",
+    institution: "David Kaunda Technical Secondary School",
+    detail: "Completed Dec 2020"
+  }
+];
+
+const certifications = [
+  "Cisco CyberOps Associate",
+  "Cisco CCNAv7: Introduction to Networks",
+  "Cisco CCNA IT Essentials",
+  "Cisco Introduction to Cybersecurity",
+  "NDG Linux Essentials",
+  "AWS Academy Cloud Foundations",
+  "Google Cloud Foundations"
+];
+
+const contacts = [
+  { icon: "📧", label: "Email", value: "Mathiasparadza01@email.com", link: "mailto:Mathiasparadza01@email.com" },
+  { icon: "📞", label: "Phone", value: "+260 971 546 581 / +260 768 619 298", link: "tel:+260971546581" },
+  { icon: "💻", label: "GitHub", value: "github.com/mathiasparadza", link: "https://github.com/mathiasparadza" },
+  { icon: "🔗", label: "LinkedIn", value: "linkedin.com/in/mathiasparadza", link: "https://linkedin.com/in/mathiasparadza" },
+  { icon: "🏅", label: "Credly (View Certifications)", value: "mathias-paradza", link: "https://www.credly.com/users/mathias-paradza" },
+  { icon: "📍", label: "Location", value: "Lusaka, Zambia", link: null }
+];
+
+const isExternal = (href: string) => href.startsWith("http");
+
+// Each section fades in as it scrolls into view, so order on screen always
+// matches order of appearance.
+const reveal = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.1 },
+  transition: { duration: 0.6 }
+};
+
 function App() {
-  const certifications = [
-    "Amazon Web Services Academy Cloud Foundations",
-    "CISCO Computer Systems – IT Essentials",
-    "CISCO NDG Linux Essentials",
-    "CISCO Introduction to Networks (CCNA1)",
-    "Google Cloud Foundations"
-  ];
-
-  const skills = [
-    "Network Configuration and Troubleshooting",
-    "Full-Stack Development",
-    "Database Design and Management",
-    "Programming and Web Development",
-    "System Administration",
-    "Cybersecurity Principles",
-    "Graphic Design"
-  ];
-
-  const experienceItems = [
-    "Led a small team of developers in delivering software solutions.",
-    "Contributed to web app development, testing, and deployment.",
-    "Supported backend and frontend integration using modern frameworks."
-  ];
-
-  const projectFeatures = [
-    "JWT login system for students, lecturers, and admins",
-    "QR code scanning via webcam for attendance",
-    "Lecturer dashboard with session creation and analytics",
-    "AI-powered attendance insights"
-  ];
-
-  const contacts = [
-    { icon: "📧", label: "Email", value: "Mathiasparadza01@email.com", link: "mailto:Mathiasparadza01@email.com" },
-    { icon: "📞", label: "Phone", value: "+260 971 546 581", link: "tel:+260971546581" },
-    { icon: "💻", label: "GitHub", value: "github.com/mathiasparadza", link: "https://github.com/mathiasparadza" },
-    { icon: "🔗", label: "LinkedIn", value: "linkedin.com/in/mathiasparadza", link: "https://linkedin.com/in/mathiasparadza" },
-    { icon: "🏅", label: "Credly (View Certifications)", value: "mathias-paradza", link: "https://www.credly.com/users/mathias-paradza" },
-    { icon: "📍", label: "Location", value: "Lusaka, Zambia", link: null }
-  ];
-
   return (
     <div className="portfolio-container">
       <div className="portfolio-content">
 
-        {/* ---------- HEADER WITH PROFILE PHOTO ---------- */}
+        {/* ---------- HEADER ---------- */}
         <motion.header
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="portfolio-header"
         >
-
-          {/* PROFILE PHOTO */}
           <div className="profile-photo-wrapper">
             <img
               src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
@@ -70,235 +207,180 @@ function App() {
           </div>
 
           <p className="header-subtitle">
-            Networking & Information Security Engineer | Full Stack Developer | Graphic Designer
-            | Entrepreneur | AI Enthusiast | Visionary
+            Networking & Information Security | IT & User Support | Full-Stack Developer
           </p>
         </motion.header>
 
-        {/* ---------- PROFILE SUMMARY ---------- */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="section-card"
-        >
-          <h2 className="section-title gradient-cyan">Profile Summary</h2>
+        {/* ---------- PROFESSIONAL SUMMARY ---------- */}
+        <motion.section {...reveal} className="section-card">
+          <h2 className="section-title gradient-cyan">Professional Summary</h2>
           <p className="section-text">
-            A results-driven IT professional with strong expertise in networking, information security,
-            and full-stack development. Proficient in analytical problem-solving and adaptability to both
-            team-based and independent technical roles.
+            Computer Science graduate in Networking &amp; Information Security from the University of
+            Zambia, with hands-on experience across IT and user support, network installation and
+            troubleshooting, and full-stack development, from first-line support for users and clients
+            to building and deploying live websites and web applications. Skilled in networking,
+            programming, databases, Linux administration, computer repair and cybersecurity. A
+            dependable, detail-oriented and analytical problem-solver who learns quickly and works
+            equally well in a team or independently.
           </p>
         </motion.section>
 
+        {/* ---------- EXPERIENCE ---------- */}
+        <motion.section {...reveal} className="section-card">
+          <h2 className="section-title gradient-blue">Professional Experience</h2>
+          {experience.map((job) => (
+            <div key={job.company} className="experience-content">
+              <p className="experience-title">
+                {job.role} – {job.company}
+              </p>
+              <p className="experience-date">
+                {job.dates} | {job.location}
+              </p>
+              <div className="experience-list">
+                {job.items.map((item) => (
+                  <div key={item} className="experience-item">
+                    <span className="experience-arrow">→</span>
+                    <span className="experience-text">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </motion.section>
+
+        {/* ---------- PROJECTS ---------- */}
+        <motion.section {...reveal} className="section-card">
+          <h2 className="section-title gradient-blue">Projects</h2>
+          {projects.map((project) => (
+            <div key={project.name} className="project-block">
+              <div className="project-content">
+                <h3 className="project-name">{project.name}</h3>
+                <p className="project-meta">{project.meta}</p>
+                <p className="project-description">{project.description}</p>
+
+                <div className="project-tech-stack">
+                  <p className="tech-stack-label">Role: {project.role}</p>
+                  <p className="tech-stack-text">{project.stack}</p>
+                </div>
+
+                {project.link && (
+                  <a
+                    href={project.link.href}
+                    className="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.link.label} ↗
+                  </a>
+                )}
+              </div>
+
+              {project.image && (
+                <div className="project-image-wrapper">
+                  <img
+                    src={project.image.src}
+                    alt={project.image.alt}
+                    className="project-image"
+                  />
+                </div>
+              )}
+
+              <div className="project-features">
+                {project.features.map((feature) => (
+                  <div key={feature} className="project-feature-item">
+                    <span className="project-feature-bullet">●</span>
+                    <span className="project-feature-text">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </motion.section>
+
+        {/* ---------- CORE COMPETENCIES ---------- */}
+        <motion.section {...reveal} className="section-card">
+          <h2 className="section-title gradient-cyan">Core Competencies</h2>
+          <div className="skills-grid">
+            {competencies.map((c) => (
+              <div key={c.area} className="skill-item skill-item-stacked">
+                <div className="skill-heading">
+                  <div className="skill-dot"></div>
+                  <span className="skill-area">{c.area}</span>
+                </div>
+                <span className="skill-text">{c.detail}</span>
+              </div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* ---------- TECHNICAL & PROFESSIONAL SKILLS ---------- */}
+        <motion.section {...reveal} className="section-card">
+          <h2 className="section-title gradient-cyan">Technical Skills</h2>
+          <div className="tech-skills">
+            {technicalSkills.map((group) => (
+              <div key={group.area} className="tech-skill-row">
+                <p className="tech-skill-area">{group.area}</p>
+                <div className="tag-list">
+                  {group.items.map((item) => (
+                    <span key={item} className="tag">{item}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="subsection-title">Professional Skills</h3>
+          <div className="tag-list">
+            {professionalSkills.map((s) => (
+              <span key={s} className="tag tag-soft">{s}</span>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* ---------- EDUCATION ---------- */}
+        <motion.section {...reveal} className="section-card">
+          <h2 className="section-title gradient-blue">Education</h2>
+          {education.map((e) => (
+            <div key={e.qualification} className="experience-content">
+              <p className="experience-title">{e.qualification}</p>
+              <p className="experience-date">
+                {e.institution} | {e.detail}
+              </p>
+            </div>
+          ))}
+        </motion.section>
+
         {/* ---------- CERTIFICATIONS ---------- */}
-        <motion.section
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="section-card"
-        >
+        <motion.section {...reveal} className="section-card">
           <h2 className="section-title gradient-cyan">Certifications</h2>
           <div className="certifications-list">
-            {certifications.map((cert, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 + i * 0.1 }}
-                className="certification-item"
-              >
+            {certifications.map((cert) => (
+              <div key={cert} className="certification-item">
                 <span className="certification-check">✓</span>
                 <span className="certification-text">{cert}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* ---------- SKILLS ---------- */}
-        <motion.section
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="section-card"
-        >
-          <h2 className="section-title gradient-cyan">Core Skills</h2>
-          <div className="skills-grid">
-            {skills.map((skill, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5 + i * 0.08 }}
-                className="skill-item"
-              >
-                <div className="skill-dot"></div>
-                <span className="skill-text">{skill}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* ---------- EXPERIENCE ---------- */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="section-card"
-        >
-          <h2 className="section-title gradient-blue">Professional Experience</h2>
-          <div className="experience-content">
-            <p className="experience-title">Junior Developer – Godspeed Technologies Limited</p>
-            <p className="experience-date">Jan 2025 – April 2025 | Lusaka, Zambia</p>
-            <div className="experience-list">
-              {experienceItems.map((item, i) => (
-                <div key={i} className="experience-item">
-                  <span className="experience-arrow">→</span>
-                  <span className="experience-text">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.section>
-
-        {/* ---------- MAIN PROJECT: QRPresence ---------- */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="section-card"
-        >
-          <h2 className="section-title gradient-blue">Major Project: QRPresence</h2>
-
-          <div className="project-content">
-            <h3 className="project-name">QRPresence</h3>
-            <p className="project-description">
-              A QR Code-Based Student Registration and Attendance Tracking System designed to
-              enhance attendance management in academic institutions.
-            </p>
-
-            <div className="project-tech-stack">
-              <p className="tech-stack-label">Role: Full-Stack Developer</p>
-              <p className="tech-stack-label">Tech Stack:</p>
-              <p className="tech-stack-text">
-                Python(Django), React (TypeScript), OpenApi(AI analytics),
-                Zustand/Recoil, MySQL, JWT Authentication
-              </p>
-            </div>
-          </div>
-
-          {/* ---------- PROJECT PHOTO ---------- */}
-          <div className="project-image-wrapper">
-            <img
-              src={`${process.env.PUBLIC_URL}/images/qrpresence.PNG`}
-              alt="QRPresence attendance system screenshot"
-              className="project-image"
-            />
-          </div>
-
-          <div className="project-features">
-            {projectFeatures.map((feature, i) => (
-              <div key={i} className="project-feature-item">
-                <span className="project-feature-bullet">●</span>
-                <span className="project-feature-text">{feature}</span>
-              </div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* ---------- COURSE PROJECTS ---------- */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.75 }}
-          className="section-card"
-        >
-          <h2 className="section-title gradient-blue">Course Projects</h2>
-
-          {/* Hospital Management System */}
-          <div className="project-content">
-            <h3 className="project-name">Hospital Management System</h3>
-            <p className="project-description">
-              A web system designed to streamline hospital operations including patient registration,
-              appointments, staff management, and medical records.
-            </p>
-
-            <div className="project-tech-stack">
-              <p className="tech-stack-label">Role: Full Stack Developer</p>
-              <p className="tech-stack-label">Tech Stack:</p>
-              <p className="tech-stack-text">PHP, JavaScript, HTML, CSS, MySQL</p>
-            </div>
-          </div>
-
-          <div className="project-features">
-            {[
-              "Designed and implemented core hospital workflows.",
-              "Built user interfaces for doctors, nurses, and admin staff.",
-              "Developed secure PHP backend for patient and appointment data.",
-              "Integrated MySQL database for medical history and billing."
-            ].map((feature, i) => (
-              <div key={i} className="project-feature-item">
-                <span className="project-feature-bullet">●</span>
-                <span className="project-feature-text">{feature}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Beowulf Cluster */}
-          <div className="project-content project-content-margin">
-            <h3 className="project-name">Beowulf Cluster (Virtual & Physical)</h3>
-            <p className="project-description">
-              Setup and management of a hybrid Beowulf cluster using virtual and physical machines
-              for distributed and parallel computing.
-            </p>
-
-            <div className="project-tech-stack">
-              <p className="tech-stack-label">Role: Systems Administrator / Cluster Engineer</p>
-              <p className="tech-stack-label">Tech Areas:</p>
-              <p className="tech-stack-text">
-                Linux Administration, Networking, MPI/OpenMP, Parallel Computing
-              </p>
-            </div>
-          </div>
-
-          <div className="project-features">
-            {[
-              "Configured Linux nodes across the cluster.",
-              "Set up SSH, networking, NFS, and shared directories.",
-              "Configured cluster management tools.",
-              "Deployed MPI/OpenMP workloads.",
-              "Optimized inter-node performance."
-            ].map((feature, i) => (
-              <div key={i} className="project-feature-item">
-                <span className="project-feature-bullet">●</span>
-                <span className="project-feature-text">{feature}</span>
               </div>
             ))}
           </div>
         </motion.section>
 
         {/* ---------- CONTACT ---------- */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="section-card"
-        >
+        <motion.section {...reveal} className="section-card">
           <h2 className="section-title gradient-blue">Contact Information</h2>
           <div className="contacts-grid">
-            {contacts.map((contact, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.8 + i * 0.1 }}
-                className="contact-card"
-              >
+            {contacts.map((contact) => (
+              <div key={contact.label} className="contact-card">
                 <div className="contact-content">
-                  <span className="contact-icon">{contact.icon}</span>
+                  <span className="contact-icon" aria-hidden="true">{contact.icon}</span>
                   <div className="contact-info">
                     <p className="contact-label">{contact.label}</p>
                     {contact.link ? (
-                      <a href={contact.link} className="contact-link">
+                      <a
+                        href={contact.link}
+                        className="contact-link"
+                        {...(isExternal(contact.link)
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
+                      >
                         {contact.value}
                       </a>
                     ) : (
@@ -306,7 +388,7 @@ function App() {
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </motion.section>
