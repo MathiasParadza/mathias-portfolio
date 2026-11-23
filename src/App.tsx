@@ -58,8 +58,8 @@ function App() {
           {/* PROFILE PHOTO */}
           <div className="profile-photo-wrapper">
             <img
-              src="/images/profile.jpg"
-              alt="Profile"
+              src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
+              alt="Mathias Paradza"
               className="profile-photo"
             />
           </div>
@@ -189,8 +189,8 @@ function App() {
           {/* ---------- PROJECT PHOTO ---------- */}
           <div className="project-image-wrapper">
             <img
-              src="/images/qrpresence.PNG"
-              alt="QRPresence Project"
+              src={`${process.env.PUBLIC_URL}/images/qrpresence.PNG`}
+              alt="QRPresence attendance system screenshot"
               className="project-image"
             />
           </div>
