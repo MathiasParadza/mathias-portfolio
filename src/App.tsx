@@ -201,6 +201,28 @@ const contacts = [
 
 const isExternal = (href: string) => href.startsWith("http");
 
+// GoatCounter (loaded in public/index.html) exposes window.goatcounter.
+declare global {
+  interface Window {
+    goatcounter?: {
+      count: (vars: { path: string; title?: string; event?: boolean }) => void;
+    };
+  }
+}
+
+// Record a link click as a GoatCounter event, e.g. "click-linkedin".
+// Does nothing if the script is blocked or hasn't loaded yet.
+const trackClick = (name: string) => {
+  try {
+    window.goatcounter?.count({ path: `click-${name}`, title: name, event: true });
+  } catch {
+    // never let analytics break a link
+  }
+};
+
+const slug = (text: string) =>
+  text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
 // Each section fades in as it scrolls into view, so order on screen always
 // matches order of appearance.
 const reveal = {
@@ -299,6 +321,7 @@ function App() {
                       className="project-link"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => trackClick(`project-${slug(project.name)}`)}
                     >
                       {project.link.label} ↗
                     </a>
@@ -408,6 +431,7 @@ function App() {
                       <a
                         href={contact.link}
                         className="contact-link"
+                        onClick={() => trackClick(`contact-${slug(contact.label)}`)}
                         {...(isExternal(contact.link)
                           ? { target: "_blank", rel: "noopener noreferrer" }
                           : {})}
