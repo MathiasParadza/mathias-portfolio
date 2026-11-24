@@ -194,7 +194,7 @@ const contacts = [
   { icon: "📧", label: "Email", value: "Mathiasparadza01@email.com", link: "mailto:Mathiasparadza01@email.com" },
   { icon: "📞", label: "Phone", value: "+260 971 546 581 / +260 768 619 298", link: "tel:+260971546581" },
   { icon: "💻", label: "GitHub", value: "github.com/mathiasparadza", link: "https://github.com/mathiasparadza" },
-  { icon: "🔗", label: "LinkedIn", value: "linkedin.com/in/mathiasparadza", link: "https://linkedin.com/in/mathiasparadza" },
+  { icon: "🔗", label: "LinkedIn", value: "linkedin.com/in/mathias-paradza", link: "https://www.linkedin.com/in/mathias-paradza" },
   { icon: "🏅", label: "Credly (View Certifications)", value: "mathias-paradza", link: "https://www.credly.com/users/mathias-paradza" },
   { icon: "📍", label: "Location", value: "Lusaka, Zambia", link: null }
 ];
