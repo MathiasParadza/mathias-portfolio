@@ -54,13 +54,13 @@ const projects: Project[] = [
     name: "The Apostles' Church Website",
     meta: "Live Project · 2024 – Present",
     description:
-      "Official 26-page, mobile-first church website, designed and built solo.",
+  "The official website of The Apostles' Church: a 26-page, mobile-first site with site-wide search and automatic deployment to GitHub Pages.".,
     role: "Sole Developer",
     stack: "HTML5 · CSS3 · JavaScript · Bootstrap 5 · Node.js · GitHub Actions · GitHub Pages",
     features: [
-      "Built all pages end to end, including a history timeline, teaching resources and a church finder with Google Maps.",
-      "Added site-wide search, indexed by a Node.js script, with Ctrl/Cmd+K and “/” keyboard shortcuts.",
-      "Automated checks and deployment to GitHub Pages with GitHub Actions on every merge to main."
+      "26 pages covering the church's history timeline, beliefs, teaching resources and a church finder with Google Maps directions.",
+      "Site-wide search across every page, powered by a Node.js-generated index, with Ctrl/Cmd+K and '/' keyboard shortcuts.",
+      "Automated checks and deployment to GitHub Pages through GitHub Actions on every merge to main."
     ],
     link: {
       label: "View live site",
