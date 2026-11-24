@@ -546,3 +546,28 @@
   font-weight: 600;
   margin: 2rem 0 0.75rem;
 }
+
+/* Tech stack box + live-site button: side by side with a gap, wrapping on small screens */
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-actions .project-tech-stack,
+.project-actions .project-link {
+  margin-bottom: 0;
+}
+
+/* Keep the button beside the stack box on tablet/desktop; the box's text wraps instead */
+@media (min-width: 769px) {
+  .project-actions {
+    flex-wrap: nowrap;
+  }
+
+  .project-actions .project-link {
+    flex-shrink: 0;
+  }
+}
