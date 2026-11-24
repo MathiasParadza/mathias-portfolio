@@ -85,6 +85,25 @@ const projects: Project[] = [
     }
   },
   {
+    name: "Goodspeed Technologies: Company Website (Demo)",
+    meta: "Practice Project",
+    description:
+      "A responsive single-page website for a fictional technology company, built to practise front-end development.",
+    role: "Front-End Developer",
+    stack: "HTML5 · CSS3 · JavaScript · Bootstrap 5 · Swiper.js · Font Awesome · GitHub Actions · GitHub Pages",
+    features: [
+      "Mobile-first layout tested from 320px phones up to desktop.",
+      "Auto-playing services slider, plus cards you can swipe sideways on mobile.",
+      "A “How can we help?” popup that fades in and out.",
+      "Contact and newsletter forms that work without a server.",
+      "Automatic deployment to GitHub Pages on every push."
+    ],
+    link: {
+      label: "View live demo",
+      href: "https://mathiasparadza.github.io/Goodspeed-Technologies/"
+    }
+  },
+  {
     name: "Hospital Management System",
     meta: "Course Project",
     description:
