@@ -54,7 +54,7 @@ const projects: Project[] = [
     name: "The Apostles' Church Website",
     meta: "Live Project · 2024 – Present",
     description:
-  "The official website of The Apostles' Church: a 26-page, mobile-first site with site-wide search and automatic deployment to GitHub Pages.".,
+      "The official website of The Apostles' Church: a 26-page, mobile-first site with site-wide search and automatic deployment to GitHub Pages.",
     role: "Sole Developer",
     stack: "HTML5 · CSS3 · JavaScript · Bootstrap 5 · Node.js · GitHub Actions · GitHub Pages",
     features: [
@@ -65,6 +65,10 @@ const projects: Project[] = [
     link: {
       label: "View live site",
       href: "https://mathiasparadza.github.io/The-Apostles-Church"
+    },
+    image: {
+      src: `${process.env.PUBLIC_URL}/images/apostles-church.webp`,
+      alt: "The Apostles' Church website home page"
     }
   },
   {
@@ -101,6 +105,10 @@ const projects: Project[] = [
     link: {
       label: "View live demo",
       href: "https://mathiasparadza.github.io/Goodspeed-Technologies/"
+    },
+    image: {
+      src: `${process.env.PUBLIC_URL}/images/goodspeed.webp`,
+      alt: "Goodspeed Technologies demo website home page"
     }
   },
   {
