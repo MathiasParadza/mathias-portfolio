@@ -287,21 +287,23 @@ function App() {
                 <p className="project-meta">{project.meta}</p>
                 <p className="project-description">{project.description}</p>
 
-                <div className="project-tech-stack">
-                  <p className="tech-stack-label">Role: {project.role}</p>
-                  <p className="tech-stack-text">{project.stack}</p>
-                </div>
+                <div className="project-actions">
+                  <div className="project-tech-stack">
+                    <p className="tech-stack-label">Role: {project.role}</p>
+                    <p className="tech-stack-text">{project.stack}</p>
+                  </div>
 
-                {project.link && (
-                  <a
-                    href={project.link.href}
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {project.link.label} ↗
-                  </a>
-                )}
+                  {project.link && (
+                    <a
+                      href={project.link.href}
+                      className="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.link.label} ↗
+                    </a>
+                  )}
+                </div>
               </div>
 
               {project.image && (
